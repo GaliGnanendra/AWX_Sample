@@ -1,6 +1,5 @@
----
 - name: Retrieve hostname of the system
-  hosts: localhost
+  hosts: all
   gather_facts: yes
   tasks:
     - name: Display the system's hostname
