@@ -1,10 +1,9 @@
----
 - name: Create non-root user with sudo privileges
   hosts: all
   become: yes
   vars:
-    new_user: <new_username>
-    new_user_password: <password>
+    new_user: Gnanendra
+    new_user_password: !@#$%
 
   tasks:
     - name: Create new user
@@ -37,4 +36,5 @@
         state: present
         validate: '/usr/sbin/visudo -cf %s'
       when: ansible_facts['distribution'] == 'RedHat' or ansible_facts['distribution'] == 'CentOS'
+
 
