@@ -3,7 +3,7 @@
   hosts: all
   become: yes
   vars:
-    desired_timezone: America/New_York
+    desired_timezone: India/New Delhi
 
   tasks:
     - name: Set hostname
@@ -13,4 +13,5 @@
     - name: Set timezone
       timezone:
         name: "{{ desired_timezone }}"
+
 
